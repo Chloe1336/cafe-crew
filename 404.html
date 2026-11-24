@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. Makes the page fit phone screens. Without it, nothing is responsive. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page not found · Kopi Kampung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- 2. Bootstrap CSS: must come BEFORE our own CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 3. Our own CSS: comes AFTER, so our styles can override Bootstrap -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Kopi Kampung</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Menu</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="menu-drinks.html">Drinks</a></li>
+                            <li><a class="dropdown-item" href="menu-food.html">Food</a></li>
+                            <li><a class="dropdown-item" href="menu-food.html">Dessert</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item"></li>
+                    <a class="nav-link" href="call.html">Call</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-body-tertiary py-5">
+        <div class="container py-lg-4">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                    <p class="text-uppercase small fw-semibold text-body-secondary mb-2">Heritage café · Ipoh, Perak</p>
+                    <h1 class="display-5 fw-bold mb-3">Kopi the way Ipoh remembers it</h1>
+                    <p class="lead mb-4">Charcoal-roasted beans, kaya toast made every morning,
+                        and a quiet corner to stay a while.</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a href="menu-drinks.html" class="btn btn-primary btn-lg px-4">See the menu</a>
+
+                        <button type="button" class="btn btn-outline-primary btn-lg px-4" data-bs-toggle="modal"
+                            data-bs-target="#findUsModal">Find us</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        </div>
+        <section class="text-center py-5">
+            <p class="display-1 fw-bold">404</p>
+            <h1 class="h2">Sorry, we can't find that page</h1>
+            <p class="lead">
+                The link may be old, or the page has moved.
+            </p>
+            <a href="index.html" class="btn btn-primary">
+                Back to the home page
+            </a>
+        </section>
+
+    </main>
+
+    <!-- PRACTICE: a row with no container -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <p>Practice box 1</p>
+        </div>
+        <div class="col-12 col-md-6">
+            <p>Practice box 2</p>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <small>&copy; 2026 Kopi Kampung</small>
+        </div>
+    </footer>
+    <!-- 5. MODAL: opens from the Find us button -->
+    <div class="modal fade" id="findUsModal" tabindex="-1" aria-labelledby="findUsTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="findUsTitle">Find us</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+
+                <div class="modal-body">
+                    <p class="mb-1"><b>Ipoh Old Town, Perak</b></p>
+                    <p>Open daily, 7 am to 6 pm. Closed on Tuesdays.</p>
+                    <a href="contact.html" class="btn btn-primary">Send us a message</a>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#bookModal">Book
+                        a table</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. BOOKING MODAL: a form inside a modal -->
+    <div class="modal fade" id="bookModal" tabindex="-1" aria-labelledby="bookTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form id="book-form" class="modal-content p-4" novalidate>
+                <h2 class="h5 mb-3" id="bookTitle">Book a table</h2>
+                <label for="book-name" class="form-label">Your name</label>
+                <input type="text" class="form-control mb-3" id="book-name" required>
+                <label for="book-date" class="form-label">Date</label>
+                <input type="date" class="form-control mb-3" id="book-date" required>
+                <button type="submit" class="btn btn-primary">Book</button>
+                <button type="button" class="btn btn-link" data-bs-dismiss="modal">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 4. Bootstrap JavaScript: at the end of body -->
+    <script src="js/bootstrap.bundle.min.js"></script&gt;
+<!-- 5. Our own JavaScript -->
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
